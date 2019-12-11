@@ -1,0 +1,105 @@
+1
+hello
+hi
+2
+good morning
+good afternoon
+3 
+i am happy
+i feel upset
+4
+thank you
+you are welcome
+5
+nice to meet you
+goodbye
+6
+i like cat food
+i like to eat fish
+7
+i drink water
+i drink milk
+8
+i eat biscuit
+i eat cake
+9 
+i eat mackeral
+i eat tuna
+10
+i love playing
+i don't like learning
+11
+i want to learn playing piano
+i want to learn playing violin
+12
+i play with doll
+i play with cat scratcher
+13
+i like to watch toy story
+i like to watch tom and jerry
+14
+my food is in the bowl
+my food is in the plate
+15
+i am scared
+i am excited
+16
+if my tail is straight up, i am happy
+if my tail is twitching, i am excited
+17 
+i like dancing
+i like singing
+18
+i am male
+i am female
+19
+i like my friends
+i love my master
+20
+i love cuddles
+i dont like cuddles
+21
+i love Malaysia
+i like Singapore
+22
+i want to travel to Vietnam
+i want to travel to China
+23
+i usually play in the backyard
+i catch rats and birds
+24
+i play guitar
+i play drum
+25
+i play football
+i play basketball
+26
+i like sleeping
+i like eating
+27 
+i love you
+i like you
+28
+i use pencil to write
+i use ruler to draw line
+29
+i scare of dogs
+i like dogs
+30
+i love to catch them
+i don't like mice.
+31
+i learn to talk 
+i learn to play games
+32
+i am smart
+i am clever
+33
+Ouch! It's hurt
+Ohh! It's itchy
+34
+i am getting fat
+i am getting prettier
+35
+computer science the best!!
+programming is super difficult!!
