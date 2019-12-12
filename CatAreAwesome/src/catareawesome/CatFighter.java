@@ -1,7 +1,4 @@
 
-
-// size 500 x 500
-// size of a corner 
 package catareawesome;
 
 
@@ -30,26 +27,29 @@ import static catareawesome.firstScene.window;
  * @author Hello
  */
 public class CatFighter {
-    private static final VBox pane = new VBox();
+    private static  VBox pane;
     private static int foodX;
     private static int foodY;
     private static int ratsCaught = 0;
     private static boolean gameOver = false;
     private static Text score = new Text();
     private static int speed = 5;
-  //  private static List<Corner> snake = new ArrayList<>();
+    private static GraphicsContext gc;
     private static Corner cat;
     private static String direction = "left";
     private static AnimationTimer timer;
+    private static ImagePattern catImage = null;
+    
     public static Scene catFighterScene() throws FileNotFoundException {
 
+        
         cat = new Corner(10, 10);
        // generate a food first
         generateNewFood();
-        
+        pane = new VBox();
         
         Canvas c = new Canvas(525, 525);
-        GraphicsContext gc = c.getGraphicsContext2D();
+        gc = c.getGraphicsContext2D();
         VBox.setMargin(c, new Insets(50, 50, 50, 50));
         pane.getChildren().addAll(score, c);
 
@@ -140,7 +140,7 @@ public class CatFighter {
         }
         
         
-        ImagePattern catImage = null; 
+         
         switch (direction) {
             case "up":
                 cat.y--;
@@ -201,7 +201,7 @@ public class CatFighter {
         
         ImagePattern rat = new ImagePattern(new Image(new FileInputStream("images\\rat.gif")));
         gc.setFill(rat);
-        gc.fillOval(foodX * 25, foodY * 25, 25, 25);
+        gc.fillRect(foodX * 25, foodY * 25, 25, 25);
 
 
         gc.setFill(catImage);
@@ -249,6 +249,10 @@ public class CatFighter {
             }
         });
         alert.show(); 
-        
+        ratsCaught = 0;
+        speed = 5;
+        gameOver = false;
+        gc.setFill(catImage);
+        gc.fillRect(cat.x * 25, cat.y*25, 25,25);
     }
 }
