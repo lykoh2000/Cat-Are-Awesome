@@ -53,15 +53,6 @@ public class addCat {
         ImagePattern cat3Iv = new ImagePattern(cat3);
         ImagePattern cat4Iv = new ImagePattern(cat4);
         
-//        cat1Iv.setFitWidth(150);
-//        cat2Iv.setFitWidth(150);
-//        cat3Iv.setFitWidth(150);
-//        cat4Iv.setFitWidth(150);
-//        
-//        cat1Iv.setFitHeight(150);
-//        cat2Iv.setFitHeight(150);
-//        cat3Iv.setFitHeight(150);
-//        cat4Iv.setFitHeight(150);
         
         Rectangle rec1 = new Rectangle(150,150,150,150);
         rec1.setFill(cat1Iv);
@@ -187,6 +178,7 @@ public class addCat {
             Cat.setHunger(0);
             Cat.setExperience(0);
             Cat.setLevel(1);
+            Cat.setExperienceLimit(100);
             
             // record the current time
             Cat.initialTime = System.currentTimeMillis()/1000L;
