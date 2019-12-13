@@ -190,6 +190,9 @@ public class Cat {
         }
     }
     
+    public static void setExperienceLimit(int exp) {
+        Cat.experienceLimit = exp;
+    }
 
     
     public static void getCatAttribute() {
