@@ -5,9 +5,11 @@
  */
 package catareawesome;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -20,6 +22,8 @@ import javafx.scene.layout.BackgroundRepeat;
 import javafx.scene.layout.BackgroundSize;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 import sun.audio.AudioData;
 import sun.audio.AudioPlayer;
@@ -75,7 +79,7 @@ public class firstScene  {
         pane.setRight(vb);
         
         Scene scene1 = new Scene(pane, 600, 600);
-        //playMusic();
+        playMusic();
         return scene1;
         
         
@@ -83,20 +87,12 @@ public class firstScene  {
     
     
     private static void playMusic() {
-        AudioPlayer ap = AudioPlayer.player;
-        AudioStream as;
-        AudioData ad; 
-        
-        ContinuousAudioDataStream loop = null;
-        
-        try {
-            as = new AudioStream(new FileInputStream("background music.wmv"));
-            ad = as.getData();
-            loop = new ContinuousAudioDataStream(ad);
-        } catch (IOException e) {
-            
-        }
-        ap.start(loop);
+
+
+        Media sound = new Media(new File("background music.wav").toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(sound);
+        mediaPlayer.play();
+
     }
     
 }
