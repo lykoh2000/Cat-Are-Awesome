@@ -206,8 +206,8 @@ public class foodInventory {
                 Cat.levelUp();
                 Cat.calculateExpLimit();
             }
-            Cat.happinessTimeLeft = (long) (Cat.getHappiness() / 100.0 + 18000);
-            Cat.hungerTimeLeft = (long) (100 - Cat.getHunger() / 100.0 + 18000);
+            Cat.happinessTimeLeft = (long) (Cat.getHappiness() / 100.0 * 18000.0 + 18000);
+            Cat.hungerTimeLeft = (long) (100 - Cat.getHunger() / 100.0 * 18000.0 + 18000);
         } else {
             AlertBox.display("You do not have enough bread");
         }
@@ -234,8 +234,8 @@ public class foodInventory {
                 Cat.calculateExpLimit();
             }
             
-            Cat.happinessTimeLeft = (long) (Cat.getHappiness() / 100.0 + 18000);
-            Cat.hungerTimeLeft = (long) (100 - Cat.getHunger() / 100.0 + 18000);
+            Cat.happinessTimeLeft = (long) (Cat.getHappiness() / 100.0 * 18000.0 + 18000);
+            Cat.hungerTimeLeft = (long) (100 - Cat.getHunger() / 100.0 * 18000.0 + 18000);
         } else {
             AlertBox.display("You do not have enough doughnut");
         }
@@ -260,8 +260,8 @@ public class foodInventory {
                 Cat.levelUp();
                 Cat.calculateExpLimit();
             }
-            Cat.happinessTimeLeft = (long) (Cat.getHappiness() / 100.0 + 18000);
-            Cat.hungerTimeLeft = (long) (100 - Cat.getHunger() / 100.0 + 18000);
+            Cat.happinessTimeLeft = (long) (Cat.getHappiness() / 100.0 * 18000.0 + 18000);
+            Cat.hungerTimeLeft = (long) (100 - Cat.getHunger() / 100.0 * 18000.0 + 18000);
         } else {
             AlertBox.display("You do not have enough pizza");
         }
@@ -285,8 +285,8 @@ public class foodInventory {
                 Cat.levelUp();
                 Cat.calculateExpLimit();
             }
-            Cat.happinessTimeLeft = (long) (Cat.getHappiness() / 100.0 + 18000);
-            Cat.hungerTimeLeft = (long) (100 - Cat.getHunger() / 100.0 + 18000);
+            Cat.happinessTimeLeft = (long) (Cat.getHappiness() / 100.0 * 18000.0 + 18000);
+            Cat.hungerTimeLeft = (long) (100 - Cat.getHunger() / 100.0 * 18000.0 + 18000);
         } else {
             AlertBox.display("You do not have enough fish");
         }
