@@ -1,4 +1,7 @@
 
+
+// size 500 x 500
+// size of a corner 
 package catareawesome;
 
 
@@ -122,8 +125,12 @@ public class CatFighter {
                     Cat.setHappiness(100);
                 }
                 if (Cat.getExperience() >= Cat.getExperienceLimit()) {
-                    Cat.levelUp();
+                    
+                    double extra = Cat.getExperience() - Cat.getExperienceLimit();
+                    Cat.setExperience(extra);
+                    Cat.setLevel(Cat.getLevel()+1);
                     Cat.calculateExpLimit();
+                    
                 }
             }
             gc.setFill(Color.RED);
@@ -131,10 +138,6 @@ public class CatFighter {
             gc.fillText("GAME OVER", 100, 250);
             timer.stop();
             gameOver();
-            
-            
-            
-           
             
             return;            
         }
