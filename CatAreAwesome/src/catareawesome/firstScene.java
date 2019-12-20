@@ -8,6 +8,8 @@ package catareawesome;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -24,6 +26,10 @@ import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import sun.audio.AudioData;
+import sun.audio.AudioPlayer;
+import sun.audio.AudioStream;
+import sun.audio.ContinuousAudioDataStream;
 
 
 
@@ -83,17 +89,35 @@ public class firstScene  {
     }
     
     
+    //private static void playMusic() {
+
+
+//        Media sound = new Media(new File("music.wav").toURI().toString());
+//        MediaPlayer mediaPlayer = new MediaPlayer(sound);
+//        mediaPlayer.play();
+//        mediaPlayer.setOnEndOfMedia(new Runnable() {
+//            @Override
+//            public void run() {
+//                mediaPlayer.seek(Duration.ZERO);
+//            }
+//        });
     private static void playMusic() {
-
-
-        Media sound = new Media(new File("background music.wav").toURI().toString());
-        MediaPlayer mediaPlayer = new MediaPlayer(sound);
-        mediaPlayer.play();
-        mediaPlayer.setOnEndOfMedia(new Runnable() {
-            public void run() {
-                mediaPlayer.seek(Duration.ZERO);
-            }
-        });
+        AudioPlayer ap = AudioPlayer.player;
+        AudioStream as;
+        AudioData ad; 
+        
+        ContinuousAudioDataStream loop = null;
+        
+        try {
+            as = new AudioStream(new FileInputStream("music.wav"));
+            ad = as.getData();
+            loop = new ContinuousAudioDataStream(ad);
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+        ap.start(loop);
     }
-    
+       
 }
+    
+
